@@ -29,13 +29,10 @@ Blockly.Blocks['lightswitch'] = {
                 code = "document.getElementById('switch').style.backgroundColor='green'; "
               break;
           }
-         
-
     }
     if (dropdown_switch==="off"){
          code = "document.getElementById('switch').style.backgroundColor='white'; "
         
-    }
-    
+    }    
     return code;
   };
