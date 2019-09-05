@@ -1,0 +1,11 @@
+.menus{
+    display: inline-block;
+    padding: 5px;
+    
+    
+}
+.menu-link{
+    display: block;
+    padding: 1px;
+    
+}
