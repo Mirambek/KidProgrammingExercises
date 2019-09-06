@@ -10,7 +10,7 @@
     <script src="../libraries/msg/ru.js"></script>
 
     <script src="customblocks.js"></script>
-
+    <link rel="stylesheet" href="../game.css">
     <style>
         body {
             background-color: #fff;
@@ -36,10 +36,20 @@
 </head>
 
 <body>
-
-    <p>
-        <button onclick="runCode()">Қосу</button>
-    </p>
+    <div style="padding:10px;" class="description">
+        <div >
+        <button onclick="runCode()">Тексеру</button>
+        </div>
+        <div style="flex-grow: 1">
+          <h1>Жануарлардың суретін, неше аяғы бар екенін, және де сипаттамасын беріңіздер.</h1>
+        </div>
+        <div >
+        <button  id="back-button" onclick="window.open('/')">
+          Артқа
+        </button>
+      </div>
+      </div>
+    
 
     <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
 
