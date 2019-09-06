@@ -13,4 +13,33 @@ button{
     background-color:#4CAF50; border-radius: 15px; 
     padding: 12px 37px; 
     font-size: 15px;font-style:italic;   
+    outline: none;
 }
+
+
+.description h1 {
+    font-weight: normal;
+    font-size: 140%;
+  }
+  @media screen and (min-width: 900px){
+    .description {
+      display: flex;      
+      flex-flow: row;
+      justify-content: space-between;
+      
+    align-items: center;
+  }
+  .description > div {
+    padding-left: 15px;
+    
+  }
+  }
+  @media screen and (max-width: 900px) {
+    .description > div{
+      display: block !important;      
+      width: 100% !important;
+  }
+  .description > div button{
+    float: none !important;
+  }
+  }
