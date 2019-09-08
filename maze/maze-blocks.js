@@ -31,8 +31,7 @@ function reset(){
     actorStyle.top=MazeGames[CURRENT_GAME].InitialActorCoordinates.Y;
     actorStyle.left=MazeGames[CURRENT_GAME].InitialActorCoordinates.X;
 }
-let move=function (currentMoveMent){
-    alert();
+let move=function (currentMoveMent){    
     if (currentMoveMent.Top){
         actorStyle.top=currentMoveMent.Top;
     }
