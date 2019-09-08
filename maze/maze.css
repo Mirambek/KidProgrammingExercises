@@ -8,43 +8,15 @@
     vertical-align: top;
     padding-top: 0.3rem;
 }
-#grid{
+.grid{
     position: relative;    
     height: 400px;
     width: 400px;
     background-image: url('img/grass.jpg');
 }
-#target, #actor {
+#target, .actor {
     height: 35px;
     width: 35px;
-}
-#target{
     position: absolute;
-    top:100px;
-    right:80px;
     z-index: 100;
-}
-#actor{
-    position: absolute;
-    top:200px;
-    left: 70px;
-    z-index: 100;
-}
-#path1{
-    position: absolute;
-    z-index:1;
-    top:200px;
-    right: 80px;
-    height: 40px;
-    width: 250px;
-    background: cornsilk;
-}
-#path2{
-    position: absolute;
-    z-index:1;
-    top:100px;
-    right: 80px;
-    height: 100px;
-    width: 40px;
-    background: cornsilk;
 }
