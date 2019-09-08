@@ -1,0 +1,59 @@
+.main-part{
+    height: 100vh;
+    width: 100vw;
+    display: table;    
+}
+.cells{
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 0.3rem;
+}
+#grid{
+    position: relative;    
+    height: 400px;
+    width: 400px;
+    background-image: url('img/grass.jpg');
+}
+#target, #actor {
+    height: 35px;
+    width: 35px;
+}
+#target{
+    position: absolute;
+    top:40px;
+    right:162px;
+    z-index: 100;
+}
+#actor{
+    position: absolute;
+    top:200px;
+    left: 70px;
+    z-index: 100;
+}
+#path1{
+    position: absolute;
+    z-index:1;
+    top:100px;
+    left: 80px;
+    height: 40px;
+    width: 120px;
+    background: cornsilk;
+}
+#path2{
+    position: absolute;
+    z-index:1;
+    top:100px;
+    left: 70px;
+    height: 140px;
+    width: 40px;
+    background: cornsilk;
+}
+#path3{
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    right: 160px;
+    height: 100px;
+    width: 40px;
+    background: cornsilk;
+}

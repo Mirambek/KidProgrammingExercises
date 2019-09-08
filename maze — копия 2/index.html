@@ -1,0 +1,61 @@
+<html>
+<header>
+    <link rel="stylesheet" href="../game.css">
+    <link rel="stylesheet" href="maze.css">
+</header>
+<script src="../libraries/blockly_compressed.js">
+</script>
+<script src="../libraries//javascript_compressed.js">
+</script>
+<script src="../libraries//blocks_compressed.js">
+</script>
+<script src="../libraries/msg/ru.js">
+</script>
+<link rel="stylesheet" href="../game.css">
+
+
+<body>
+    <div style="padding:10px;" class="description">
+        <div>
+            <button id="validateButton" onclick="runCode()">Тексеру</button>
+        </div>
+        <div style="flex-grow: 1">
+            <h1>Жануарлардың суретін, неше аяғы бар екенін, және де сипаттамасын беріңіздер.</h1>
+        </div>
+        <div>
+            <button id="back-button" onclick="window.history.back()">
+                Артқа
+            </button>
+        </div>
+    </div>
+    <div class="main-part">
+        <div class="cells">
+            <div id="grid">
+                <img src="img/aldar.png" id="actor">
+                <img src="img/apple.png" alt="" id="target">
+                
+                    <div id="path1" ></div>
+                    <div id="path2"></div>
+                    <div id="path3"></div>
+            </div>
+        </div>
+        <div class="cells">
+            
+    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+
+    
+        </div>
+    </div>
+</body>
+<xml id="toolbox" style="display: none;">
+        <category name="Логикасы">
+                <block type="MOVE_FORWARD"></block>
+                <block type="TURN_LEFT"></block>
+                <block type="TURN_RIGHT"></block>
+        </category>
+        
+    </xml>
+    <script src="maze-blocks.js"></script>
+
+    <script src="maze-runner.js"></script>
+</html>
