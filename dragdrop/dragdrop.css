@@ -12,7 +12,11 @@
     display: table-row;
     border: 1px solid  #000000;
 }
-
+ img{
+    height: 150px;
+    widows: 150px;
+    margin-left:5px;
+}
 #selection-table .cell{
     text-align: left;
     width: 49vw;
