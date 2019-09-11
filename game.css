@@ -43,3 +43,7 @@ button{
     float: none !important;
   }
   }
+  
+#right-stars span{
+  color: #ccc;
+}

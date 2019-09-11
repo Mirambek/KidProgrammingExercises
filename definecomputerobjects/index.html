@@ -2,14 +2,21 @@
 <header>
     <link rel="stylesheet" href="../game.css">
     <link rel="stylesheet" href="definecompobj.css">
+    <style>
+        input{
+            background-color: cornsilk;
+            padding-left: 7px;
+            font-size: 15px;
+        }
+    </style>
 </header>
 
 
 <body>
     <div style="padding:10px;" class="description">
-        <!-- <div>
-            <button id="validateButton" onclick="runCode()">Тексеру</button>
-        </div> -->
+        <div>
+            <button id="validateButton" >Тексеру</button>
+        </div>
         <div style="flex-grow: 1">
             <h1>1-тақырып: «Компьютермен жұмыс кезіндегі қауіпсіздік техникасы. Дұрыс және бұрыс әрекеттерді
                 топтастырыңыз.</h1>
@@ -21,7 +28,7 @@
         </div>
     </div>
     <hr />
-    <div class="table">
+    <div class="table" style="padding-bottom: 10px;">
         <div class="cell" id="right-stars" style="text-align: center">
             <div style="border: 1px solid greenyellow;display: inline-block;">
                 <div>
@@ -31,12 +38,7 @@
                 <span>★ </span>
                 <span>★ </span>
                 <span>★ </span>
-                <span>★ </span>
-                <span>★ </span>
-                <span>★ </span>
-                <span>★ </span>
-                <span>★ </span>
-                <span>★ </span>
+                
             </div>
         </div>
     </div>
@@ -44,9 +46,9 @@
         <div class="cell" id="display-images" style="position:relative;border:1px solid #000;">
           <div> 
               <img src="img/computerobj.jpg" alt="">
-              <input type="text" id="comp" name="монитор" minlength="7" maxlength="10" size="15" 
+              <input type="text" id="block"   
         style="
-        position: relative; 
+
         border: solid red; 
         border-radius: 34%;
         top: 16px;
@@ -56,8 +58,8 @@
         height: 55px;
         width: 167px;
         outline: none;">
-        <input type="text" id="block" name="жүйелік блок" minlength="12" maxlength="14" size="15" 
-        style=" position: relative; 
+        <input type="text" id="monitor"   
+        style=" 
         border: solid red; 
         border-radius: 34%;
         top: -6px;
@@ -67,8 +69,8 @@
         height: 55px;
         width: 167px;
         outline: none" >
-        <input type="text" id="mouse" name="тінтуір" minlength="7" maxlength="10" size="15" 
-        style="position: relative; 
+        <input type="text" id="mouse"    
+        style="
         border: solid red; 
         border-radius: 34%;
         top: 425px;
@@ -78,7 +80,7 @@
         height: 55px;
         width: 167px;
         outline: none" >
-        <input type="text" id="board" name="пернетақта" minlength="10" maxlength="12" size="15" 
+        <input type="text" id="board"   
         style="position: relative; 
         border: solid red; 
         border-radius: 34%;
@@ -90,8 +92,7 @@
         width: 167px;
         outline: none">
           </div>  
-        </div>
-        
+        </div>        
     </div>
 
 </body>
