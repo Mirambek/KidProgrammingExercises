@@ -1,5 +1,6 @@
 (function(){
     const IdDragging="dragging-id-element";
+    const DropEnabledIds=["display-images","list-right-actions","list-wrong-actions"];
     var listOfImages=document.getElementById("display-images").getElementsByTagName("img");
     Array.prototype.forEach.call(listOfImages,element => {
         var src=element.getAttribute("src");
@@ -10,19 +11,25 @@
         element.setAttribute("draggable","true");
         function drag(event){
             event.dataTransfer.setData(IdDragging,element.getAttribute("id"))
+            event.dataTransfer.effectAllowed="copy";
         }
     });
-    document.getElementById("display-images").addEventListener('drop',drop);
-    document.getElementById("display-images").addEventListener('dragover',allowDrop);
-    document.getElementById("list-right-actions").addEventListener('drop',drop);
-    document.getElementById("list-right-actions").addEventListener('dragover',allowDrop);
-    document.getElementById("list-wrong-actions").addEventListener('drop',drop);
-    document.getElementById("list-wrong-actions").addEventListener('dragover',allowDrop);
+    DropEnabledIds.forEach(function(f){
+      document.getElementById(f).addEventListener('drop',drop);
+      document.getElementById(f).addEventListener('dragover',allowDrop);
+    });
 
     function drop(ev) {
         ev.preventDefault();
         var data = ev.dataTransfer.getData(IdDragging);
-        ev.target.appendChild(document.getElementById(data));
+        var target=ev.target;
+        if (DropEnabledIds.indexOf(target.id)<0){
+          if (DropEnabledIds.indexOf(ev.currentTarget.id)<0  ){            
+            return false;
+          }
+          target=ev.currentTarget;
+        } 
+        target.appendChild(document.getElementById(data));
         var listOfRightImages=document.getElementById("list-right-actions").getElementsByTagName("img");
         var rightAnswers=0;
         for(var i=0;i<listOfRightImages.length;i++){

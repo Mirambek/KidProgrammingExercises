@@ -17,6 +17,9 @@
     widows: 150px;
     margin-left:5px;
 }
+img:hover{
+    cursor: grab;
+}
 #selection-table .cell{
     text-align: left;
     width: 49vw;
