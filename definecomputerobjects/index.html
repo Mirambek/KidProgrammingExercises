@@ -1,7 +1,7 @@
 <html>
 <header>
     <link rel="stylesheet" href="../game.css">
-    <link rel="stylesheet" href="dragdrop.css">
+    <link rel="stylesheet" href="definecompobj.css">
 </header>
 
 
@@ -41,11 +41,57 @@
         </div>
     </div>
     <div class="table">
-        <div class="cell" id="display-images" style="height: 30vh;border:1px solid #000;">
-          <div>
+        <div class="cell" id="display-images" style="position:relative;border:1px solid #000;">
+          <div> 
               <img src="img/computerobj.jpg" alt="">
+              <input type="text" id="comp" name="монитор" minlength="7" maxlength="10" size="15" 
+        style="
+        position: relative; 
+        border: solid red; 
+        border-radius: 34%;
+        top: 16px;
+        left: 0px;
+        position: absolute;
+        z-index: 1000;
+        height: 55px;
+        width: 167px;
+        outline: none;">
+        <input type="text" id="block" name="жүйелік блок" minlength="12" maxlength="14" size="15" 
+        style=" position: relative; 
+        border: solid red; 
+        border-radius: 34%;
+        top: -6px;
+        left: 310px;
+        position: absolute;
+        z-index: 1000;
+        height: 55px;
+        width: 167px;
+        outline: none" >
+        <input type="text" id="mouse" name="тінтуір" minlength="7" maxlength="10" size="15" 
+        style="position: relative; 
+        border: solid red; 
+        border-radius: 34%;
+        top: 425px;
+        left: 440px;
+        position: absolute;
+        z-index: 1000;
+        height: 55px;
+        width: 167px;
+        outline: none" >
+        <input type="text" id="board" name="пернетақта" minlength="10" maxlength="12" size="15" 
+        style="position: relative; 
+        border: solid red; 
+        border-radius: 34%;
+        top: 474px;
+        left: 3px;
+        position: absolute;
+        z-index: 1000;
+        height: 55px;
+        width: 167px;
+        outline: none">
           </div>  
         </div>
+        
     </div>
 
 </body>
