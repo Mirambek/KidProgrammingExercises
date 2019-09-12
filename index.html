@@ -99,6 +99,68 @@
     border-color: rgb(89, 180, 222);
   }
 }
+ul {
+  background: transparent;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    color: #fff;
+  background: transparent;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+}
+li.menus{
+ text-align: left;
+}
+li a {
+  color: #fff;
+}
+
+li:hover {
+    background: transparent;
+    cursor: pointer;
+}
+ul li {
+  float: left;
+}
+ul li ul {
+  box-shadow: 0 0 10px #9ecaed;
+    background: transparent;
+    visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+    position: relative;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  z-index: 10000;
+    left: 0;
+  display: none;
+  text-align: left;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+  box-shadow: 0 0 10px #9ecaed;
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+    clear: both;
+  width: 100%;
+}
+
+Resources
+
 </style>
 <body>
     <div
@@ -108,21 +170,26 @@
         <img src="./img/arm.png" style="position: absolute; top:140px; left:-10px">
         <img src="./img/legs.png" style="position: absolute; top:350px; left:400px">
         <h1 style="text-shadow: 1.8px 1.8px 0px #fff;font-size: 50px;">Тапсырма таңдаңыз:</h1>
-        <div style="position: relative">
+        <ul style="position: relative">
             <div class="shape-connection-1"></div>
-            <div class="menus" style="padding: 100px; font-size: 25px"><a href="lightswitch/index.html"
-                    class="menu-link" style="position: absolute;z-index: 1000; top: 30px;left: 10px;"
-                        ><div class="circle"></div> Шарды бояу</a>
-                    <a href="Puzzle/index.html" class="menu-link" style=" z-index: 1000;position: absolute; top: 220px; right: 180px">
-                       <div class="circle"></div> Суреттерді топтастыр</a>
-                <a href="maze/index.html?game=0" class="menu-link" style="z-index: 1000; position: absolute; top: 70px; left:400px"
-                        ><div class="circle"></div>Лабиринтте алма жинау оңай</a></div>
+            <li class="menus" style="padding: 100px; font-size: 25px;position: absolute;z-index: 1000; top: 30px;left: 10px;">
+            <a href="" class="menu-link"><div class="circle"></div>Онай тапсырмалар</a>
+             <ul> 
+                <li> <a href="lightswitch/index.html"
+                    class="menu-link" style=""
+                        ><div class="circle"></div> Шарды бояу</a></li>
+                  <li>  <a href="Puzzle/index.html" class="menu-link" style="">
+                       <div class="circle"></div> Суреттерді топтастыр</a></li>
+                  <li><a href="maze/index.html?game=0" class="menu-link" style=""
+                        ><div class="circle"></div>Лабиринтте алма жинау оңай</a></li>
+              </ul>
+              </li>
             <div class="menus" style="padding: 100px; font-size: 35px">
                 <a href="maze/index.html?game=1" class="menu-link" style="z-index: 1000; position: absolute; top: 350px; left: 10px;">
                     <div class="circle"></div>Лабиринтте алма жинау орташа</a>
                 <a href="maze/index.html?game=2" class="menu-link" style="z-index: 1000;position: absolute; top: 500px"
                     ><div class="circle"></div>Лабиринтте алма жинау қиын</a></div>
-        </div>
+        </ul>
                 
         <div>
             <div>
