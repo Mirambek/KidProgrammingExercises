@@ -3,24 +3,64 @@
 <header>
     <link rel="stylesheet" href="game.css">
 </header>
-
+<style>
+.circle {
+  border-radius: 50%;
+  width: 20px;
+  height:20px;
+  background-color: #59b4de;
+  position: relative;
+  display: inline-block;
+  margin-top: 2px;
+}
+.circle::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  height: 5px;
+  margin-top: -3px;
+  top: 50%;
+  left: 1px;
+  right: 1px;
+  z-index: 9;
+}
+.circle::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 5px;
+  margin-left: -2px;
+  left: 50%;
+  top: 1px;
+  bottom: 1px;
+  z-index: 9;
+}
+</style>
 <body>
     <div
-        style="margin:auto; width:49rem;text-align: center;min-height: 100vh;background-color: cornsilk;padding-top:5rem">
+        style="margin:auto; width:49rem;text-align: center;min-height: 100vh;padding-top:5rem">
         <!-- <h1 style="font-size: 80px"></h1> -->
-        <h1>Тапсырма таңдаңыз:</h1>
-        <div>
-            <div class="menus" style="padding: 100px; font-size: 35px"><a href="lightswitch/index.html"
-                    class="menu-link" style="padding: 20px">Шарды бояу</a>
-                    <a href="Puzzle/index.html" class="menu-link" style="padding: 20px">
-                        Суреттерді топтастыр</a>
-                <a href="maze/index.html?game=0" class="menu-link" style="padding: 30px">Лабиринтте алма жинау оңай</a></div>
+        <img src="./img/robot.png" style="position:absolute; top:440px; right: -50px;">
+        <img src="./img/arm.png" style="position: absolute; top:140px; left:-10px">
+        <img src="./img/legs.png" style="position: absolute; top:350px; left:400px">
+        <h1 style="color: red;font-size: 50px;">Тапсырма таңдаңыз:</h1>
+        <div style="position: relative">
+            <div class="menus" style="padding: 100px; font-size: 25px"><a href="lightswitch/index.html"
+                    class="menu-link" style="position: absolute;z-index: 1000; top: 30px;left: 10px;"
+                        ><div class="circle"></div> Шарды бояу</a>
+                    <a href="Puzzle/index.html" class="menu-link" style=" z-index: 1000;position: absolute; top: 220px; right: 180px">
+                       <div class="circle"></div> Суреттерді топтастыр</a>
+                <a href="maze/index.html?game=0" class="menu-link" style="z-index: 1000; position: absolute; top: 70px; left:400px"
+                        ><div class="circle"></div>Лабиринтте алма жинау оңай</a></div>
             <div class="menus" style="padding: 100px; font-size: 35px">
-                <a href="maze/index.html?game=1" class="menu-link" style="padding: 20px">
-                    Лабиринтте алма жинау орташа</a>
-                <a href="maze/index.html?game=2" class="menu-link" style="padding: 30px">Лабиринтте алма жинау қиын</a></div>
+                <a href="maze/index.html?game=1" class="menu-link" style="z-index: 1000; position: absolute; top: 350px; left: 10px;">
+                    <div class="circle"></div>Лабиринтте алма жинау орташа</a>
+                <a href="maze/index.html?game=2" class="menu-link" style="z-index: 1000;position: absolute; top: 500px"
+                    ><div class="circle"></div>Лабиринтте алма жинау қиын</a></div>
         </div>
-
+                
         <div>
             <div>
                 <div class="marker"

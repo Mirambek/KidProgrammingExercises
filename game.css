@@ -8,6 +8,7 @@
     display: block;
     padding: 1px;
     
+    
 }
 button{
     background-color:#4CAF50; border-radius: 15px; 
@@ -46,4 +47,10 @@ button{
   
 #right-stars span{
   color: #ccc;
+}
+
+body{
+  background-image: url("./img/title-stars.png");
+  background-color: rgb(17, 17, 17);
+  z-index: 1;
 }
