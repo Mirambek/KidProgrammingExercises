@@ -50,7 +50,8 @@ button{
 }
 
 body{
-  background-image: url("./img/title-stars.png");
-  background-color: rgb(17, 17, 17);
+  background-color: #050b1b;
+  /* background-image: url("./img/title-stars.png"); */
+  font-family: 'Times New Roman', Times, serif;
   z-index: 1;
 }

@@ -1,4 +1,4 @@
-const spanSuffix="_span";
+(function(){const spanSuffix="_span";
 const rightMark="&#10004;";
 const wrongMark="&#10008;";
 var objects = [ { id: "monitor", rightText: "монитор" }, 
@@ -39,4 +39,5 @@ document.getElementById("validateButton").addEventListener("click", function (ev
             listStars[i].style.color = '#ccc';
     }
     document.getElementById("right-stars").getElementsByTagName("h3")[0].innerHTML=" Дұрыс жауаптар("+rightAnswers+"):";
-});
+})
+})()
