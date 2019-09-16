@@ -49,9 +49,3 @@ button{
   color: #ccc;
 }
 
-body{
-  background-color: #050b1b;
-  /* background-image: url("./img/title-stars.png"); */
-  font-family: 'Times New Roman', Times, serif;
-  z-index: 1;
-}
