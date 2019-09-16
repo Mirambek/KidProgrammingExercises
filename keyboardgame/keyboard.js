@@ -1,6 +1,6 @@
     var wrongTyped = 0;
     var rightTyped = 0;
-    var text1 = "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
+    var text1 = "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
     var textToTypeId = "text-to-type";
     var textToTypeElement = document.getElementById(textToTypeId);
     var typingResult = document.getElementById("typing-result");
@@ -28,6 +28,16 @@
                     + text1.substr(currentRightlyTypedPosition, 1) + "</span>"
                     + text1.substr(currentRightlyTypedPosition + 1);
                 typingResult.innerHTML = text1.substr(0, currentRightlyTypedPosition);
+                
+                var listStars = document.getElementById("right-stars").getElementsByTagName("span");
+                
+                    
+                    for (var i = 0; i < listStars.length; i++) {
+                    if (currentRightlyTypedPosition%6===0)
+                    
+                    listStars[currentRightlyTypedPosition/6-1].style.color = '#ffc700';
+                    
+                }
             } else {
                 wrongTyped++;
             }
