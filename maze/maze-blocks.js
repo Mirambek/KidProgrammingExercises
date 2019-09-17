@@ -19,7 +19,7 @@ let MazeGames=[
     },
     {
         RightPath:[{Direction: Directions.TURN_LEFT, Top:"75px"}, 
-        {Direction: Directions.MOVE_FORWARD, Left:"105px"}
+        {Direction: Directions.MOVE_FORWARD, Left:"105px"},
         {Direction: Directions.TURN_LEFT, Top:"85px"}],
         InitialActorCoordinates:{X:"200px",Y:"70px"}
     },
