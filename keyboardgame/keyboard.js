@@ -11,12 +11,15 @@ var text1 = tasks[currentIndex];
 textToTypeElement.innerHTML = text1;
 var currentRightlyTypedPosition = 0;
 var pressedWithinTimeLimitTypeCorrectly = 0;
-var startGame = function () {
+var makeRectangleExpectedLetter=function (){
 
     textToTypeElement.innerHTML = text1.substr(0, currentRightlyTypedPosition)
         + "<span style='border:solid 1px black;'>"
         + text1.substr(currentRightlyTypedPosition, 1) + "</span>"
         + text1.substr(currentRightlyTypedPosition + 1);
+}
+var startGame = function () {
+    makeRectangleExpectedLetter();
     var startedTime = (new Date()).getTime();
     document.addEventListener('keypress', function (ev) {
         var key = ev.keyCode;
@@ -28,26 +31,33 @@ var startGame = function () {
             }
             rightTyped = rightTyped + 1;
             currentRightlyTypedPosition++;
-            textToTypeElement.innerHTML = text1.substr(0, currentRightlyTypedPosition)
-                + "<span style='border:solid 1px black;'>"
-                + text1.substr(currentRightlyTypedPosition, 1) + "</span>"
-                + text1.substr(currentRightlyTypedPosition + 1);
+            makeRectangleExpectedLetter();
             typingResult.innerHTML = text1.substr(0, currentRightlyTypedPosition);
 
             var listStars = document.getElementById("right-stars").getElementsByTagName("span");
 
 
-            for (var i = 0; i < listStars.length; i++) {
+            
                 if (currentRightlyTypedPosition % 6 === 0)
                     listStars[currentRightlyTypedPosition / 6 - 1].style.color = '#ffc700';
-            }
+            
         } else {
             wrongTyped++;
         }
         if (text1 === typingResult.innerHTML) {
+            
             if (confirm("Тағыда ойнау")) {
+                var listStars = document.getElementById("right-stars").getElementsByTagName("span");
+                for (var i = 0; i < listStars.length; i++) {
+                        listStars[i].style.color = '#ccc';
+                }
                 currentIndex++;
-                // 1)reset Stars - var listStarts=null;
+                text1=tasks[currentIndex];
+                makeRectangleExpectedLetter();
+                typingResult.innerHTML="";
+                currentRightlyTypedPosition=0;
+                pressedWithinTimeLimitTypeCorrectly=0;
+                // 1)reset Stars - id=right-stars div's inside span should be style.color=to default value 
                 // 2)reset Task 
                 // 3)reset result
              } else {
