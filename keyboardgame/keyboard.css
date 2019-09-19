@@ -4,9 +4,9 @@
     width: 96%;
     height: 49%;
 }
-.help{
-    border:2px solid blue;
-    box-shadow: 0 0 10px blue;
+.right{
+    border:2px solid gray;
+    box-shadow: 0 0 10px gray;
     height: 99%;
 
 }
@@ -30,5 +30,9 @@
     
     
     width: 70%;
+    
+}
+b{
+    margin: 10px;
     
 }

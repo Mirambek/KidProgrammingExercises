@@ -8,7 +8,7 @@
 <body>
     <div style="padding:10px;" class="description">
         <div>
-            <button id="startGame" onclick="startGame()">Run</button>
+            <button id="startGame" onclick="startGame(this)">Run</button>
         </div>
         <div style="flex-grow: 1">
             <h1 style="text-align: center">Пернетақтаны қолданып, корсетілген мәтінді дұрыс теріңіз</h1>
@@ -42,7 +42,7 @@
     <div class="main-section">
         <div class="left">
 
-            <div class  ="textarea">
+            <div class="textarea">
                 <div id="text-to-type">
                 </div>
             </div>
@@ -54,8 +54,11 @@
         </div>
 
         <div class="right">
-            <div class="help">
-
+            <div class="levelAnswers">
+                <b>Әр деңгей, қанша уақытта орындалды:</b>
+                <div id="time"> </div>
+                <div id="time-1"> </div>
+                <div id="time-2"> </div>
             </div>
         </div>
     </div>
