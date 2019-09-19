@@ -12,15 +12,15 @@ let MazeGames=[
         InitialActorCoordinates:{X:"200px",Y:"70px"}
     },
     {
-        RightPath:[{Direction: Directions.MOVE_FORWARD, Left:"95px"}, 
-        {Direction: Directions.TURN_LEFT,Top:"149px"}, 
-        {Direction: Directions.MOVE_FORWARD, Left:"305px"}],
+        RightPath:[{Direction: Directions.MOVE_FORWARD, Left:"200px"}, 
+        {Direction: Directions.TURN_LEFT,Top:"100px"}, 
+        {Direction: Directions.MOVE_FORWARD, Left:"275px"}],
         InitialActorCoordinates:{X:"200px",Y:"60px"}
     },
     {
-        RightPath:[{Direction: Directions.TURN_LEFT, Top:"75px"}, 
-        {Direction: Directions.MOVE_FORWARD, Left:"105px"},
-        {Direction: Directions.TURN_LEFT, Top:"85px"}],
+        RightPath:[{Direction: Directions.TURN_LEFT, Top:"100px"}, 
+        {Direction: Directions.MOVE_FORWARD, Left:"200px"},
+        {Direction: Directions.TURN_LEFT, Top:"45px"}],
         InitialActorCoordinates:{X:"200px",Y:"70px"}
     },
 ];
