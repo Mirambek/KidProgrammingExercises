@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../libraries/blockly_compressed.js"> </script>
+    <script src="../libraries/javascript_compressed.js"> </script>
+    <script src="../libraries/blocks_compressed.js"> </script>
+    <script src="../libraries/msg/ru.js"> </script>
+    <link rel="stylesheet" href="../game.css">
+    <script src="./weather.js"> </script>
+</head>
+
+<style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+</style>
+
+<body>
+    <div style="padding:10px;" class="description">
+        <div style="">
+            <button id="validateButton">Тексеру</button>
+        </div>
+        <div style="flex-grow: 1">
+            <h1>Gismeteo бағдарламасымен қолдану. Дүйсенбіден Жексенбіге дейін дұрыс кезекпен қойып шығыңыз!</h1>
+        </div>
+        <div>
+            <button id="back-button" onclick="window.history.back()">
+                Артқа
+            </button>
+        </div>
+    </div>
+
+    <div id="blocklyDiv" style="height: 100vh; width: 100vw;"></div>
+    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+        <block type="google" x="79" y="50">
+        </block>
+        <block type="gismeteo" x="300" y="20">
+        </block>
+        <block type="mon" x="150" y="150">
+        </block>
+        <block type="tue" x="400" y="200">
+        </block>
+        <block type="wed" x="500" y="500">
+        </block>
+        <block type="thu" x="300" y="300">
+        </block>
+        <block type="fri" x="400" y="50">
+        </block>
+        <block type="sat" x="79" y="400">
+        </block>
+        <block type="sun" x="250" y="10">
+        </block>
+        <!-- <block type="mon" x="" y="">
+        </block> -->
+
+    </xml>
+<script>
+var blocklyDiv = document.getElementById('blocklyDiv');
+  var demoWorkspace = Blockly.inject(blocklyDiv,
+    {
+      media: '../../media/',
+      scrollbars: true,
+      sounds: false,
+      //  toolbox: document.getElementById('toolbox')
+    });
+  Blockly.Xml.appendDomToWorkspace(document.getElementById('toolbox'),
+    demoWorkspace);
+    
+    function validate() {
+    var blocks = demoWorkspace.getAllBlocks();
+    var errors = 0;
+    var badBlocks = [];
+    for (var b = 0, block; block = blocks[b]; b++) {
+      if (block.isCorrect && !block.isCorrect()) {
+        errors++;
+        // Bring the offending blocks to the front.
+        block.select();
+        console.log(block);
+        badBlocks.push(block);
+      }
+    }
+    if (errors < 1)
+      alert(`Жарайсын бәрі дұрыс!`);
+    else
+      alert(`Дурыс емес саны ` + errors + '!');
+  }
+  document.getElementById("validateButton").addEventListener("click", function () {
+    validate();
+  });
+</script>
+</body>
+
+</html>

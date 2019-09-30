@@ -30,28 +30,25 @@
     /* #blocklyArea {
               height: 99%;
             } */
-    
   </style>
 </header>
 
 <body>
   <div style="padding:10px;" class="description">
     <div style="">
-    <button id="validateButton">Тексеру</button>
+      <button id="validateButton">Тексеру</button>
     </div>
     <div style="flex-grow: 1">
       <h1>Жануарлардың суретін, неше аяғы бар екенін, және де сипаттамасын беріңіздер.</h1>
     </div>
-    <div >
-    <button  id="back-button" onclick="window.history.back()">
-      Артқа
-    </button>
-  </div>
+    <div>
+      <button id="back-button" onclick="window.history.back()">
+        Артқа
+      </button>
+    </div>
   </div>
 
   <div id="blocklyDiv" style="height: 100vh; width: 100vw;"></div>
-
-
   <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
     <block type="ara" x="79" y="50">
       <field name="NAME">Ара</field>
@@ -99,9 +96,9 @@
         badBlocks.push(block);
       }
     }
-    if (errors<1) 
+    if (errors < 1)
       alert(`Жарайсын бәрі дұрыс!`);
-    else 
+    else
       alert(`Дурыс емес саны ` + errors + '!');
   }
   document.getElementById("validateButton").addEventListener("click", function () {
