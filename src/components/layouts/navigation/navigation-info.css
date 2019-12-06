@@ -1,0 +1,38 @@
+header{
+    width: 100%;
+    /* background-color:#39CCCC; */
+    background-color: #5c6ac4;
+    height: 5.5rem;
+    position: absolute;
+    top:0;
+}
+.description{
+    margin-top:5.3rem;
+}
+ul {
+    float: right;
+    padding-right:5rem;
+    padding-top:0.3rem;
+    list-style-type: none;
+}
+ul li {
+    display: inline-block;
+    padding:0.2rem;
+    padding-left: 1.2rem;
+    color:#D9EFF0;
+}
+ul li span:first-child, span.number{
+    text-align: center;    
+}
+ul li span.number{
+    font-size: 1.5rem;
+}
+ul li span{
+    display: block;    
+}
+ul li span.text{
+    font-size: 0.7rem;
+}
+ul li:first-child{
+    float: left;
+}

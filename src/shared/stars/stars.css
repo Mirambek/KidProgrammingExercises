@@ -1,0 +1,7 @@
+.stars span{ display: inline !important;}
+@media only screen and (min-width:900px){
+.stars {
+    position: absolute;
+    left: 37%;
+}
+}
