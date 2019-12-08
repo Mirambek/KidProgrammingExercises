@@ -13,7 +13,7 @@ class Congratulation extends PureComponent {
     componentDidMount(){
         this.subscription=   TaskServices.getInstance().MessageCongratulation.subscribe(
             (data)=>{
-                 console.log({...data                    });
+               
                 this.setState(
                     {...data                    }
                     )

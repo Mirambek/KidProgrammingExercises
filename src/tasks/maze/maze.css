@@ -1,0 +1,135 @@
+.main-part{
+    height: 100vh;
+    width: 100vw;
+    display: table;    
+}
+
+.cells{
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 0.3rem;
+}
+.grid{
+    position: relative;    
+    height: 400px;
+    width: 400px;
+    background-image: url('/img/grass.jpg');
+}
+#target, .actor {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    z-index: 100;
+}
+
+
+#GAME-0 #target {
+    top: 100px;
+    right: 80px;
+}
+
+#GAME-0 .actor {
+    top: 200px;
+    left: 110px;
+}
+
+#GAME-0  #path1 {
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    right: 80px;
+    height: 40px;
+    width: 210px;
+    background: cornsilk;
+}
+
+#GAME-0 #path2 {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 80px;
+    height: 100px;
+    width: 40px;
+    background: cornsilk;
+}
+
+
+#GAME-1 #target {
+    top: 100px;
+    right: 80px;
+}
+
+#GAME-1 .actor {
+    top: 200px;
+    left: 60px;
+}
+
+#GAME-1 #path1 {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 80px;
+    height: 40px;
+    width: 120px;
+    background: cornsilk;
+}
+
+#GAME-1 #path2 {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 200px;
+    height: 140px;
+    width: 40px;
+    background: cornsilk;
+}
+
+#GAME-1 #path3 {
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    right: 240px;
+    height: 40px;
+    width: 100px;
+    background: cornsilk;
+}
+
+#GAME-2 #target {
+    top: 40px;
+    right: 162px;
+}
+
+#GAME-2 .actor {
+    top: 200px;
+    left: 70px;
+}
+
+#GAME-2 #path1 {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 80px;
+    height: 40px;
+    width: 120px;
+    background: cornsilk;
+}
+
+#GAME-2 #path2 {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 70px;
+    height: 140px;
+    width: 40px;
+    background: cornsilk;
+}
+
+#GAME-2 #path3 {
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    right: 160px;
+    height: 100px;
+    width: 40px;
+    background: cornsilk;
+}

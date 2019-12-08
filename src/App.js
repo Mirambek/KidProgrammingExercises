@@ -6,7 +6,7 @@ import MainApp from './components/layouts/main-app/main-app';
 
 function App() {
   return (
-    <BrowserRouter>    
+    <BrowserRouter >    
     <Route exact path="/" component={Home}/>
     <Route path="/app" component={MainApp}/>
     </BrowserRouter>

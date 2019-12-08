@@ -26,6 +26,13 @@ const Tasks={
     Tasks:9,
     RightAnswer:0,
     Description:"Жануарлардың суретін, неше аяғы бар екенін, және де сипаттамасын беріңіздер",
+    NextTaskUrl:"/app/fifth"
+  },
+  5:{
+    Number:5,
+    Tasks:1,
+    RightAnswer:0,
+    Description:"Жануарлардың суретін, неше аяғы бар екенін, және де сипаттамасын беріңіздер",
     NextTaskUrl:null
   },
   currentNum:1

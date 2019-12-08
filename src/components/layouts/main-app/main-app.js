@@ -8,6 +8,7 @@ import DefineObjects from '../../../tasks/define-objects/define-objects'
 import Congratulation from '../../../shared/modal-dialog/congratulation'
 import ObjectMapping from '../../../tasks/select-objects/object-mapping'
 import Puzzle from '../../../tasks/puzzles/puzzle'
+import Maze from '../../../tasks/maze/maze'
 class MainApp extends PureComponent {
     
     constructor(props) {
@@ -35,6 +36,7 @@ class MainApp extends PureComponent {
                 <Route path={`${this.props.match.path}/third`} component={DefineObjects}></Route>
                 <Route path={`${this.props.match.path}/second`} component={ObjectMapping}></Route>
                 <Route path={`${this.props.match.path}/fourth`} component={Puzzle}></Route>
+                <Route path={`${this.props.match.path}/fifth`} component={Maze}></Route>
             <Congratulation></Congratulation>
             </div>
         )
