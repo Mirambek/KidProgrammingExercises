@@ -1,0 +1,96 @@
+
+.info-msg{
+    font-size: 1.6rem;
+}
+.info-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.info-msg i {
+    margin-right: 1rem;
+}
+.blinking{
+    position: absolute;
+    font-size: large;
+    z-index: 101;
+	animation:blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+	0%{		font-size: medium;	}
+	49%{	font-size: x-large;	}	
+	100%{	font-size: large;	}
+}
+
+.tool {
+    position : relative;
+  }
+  
+  .tool::before, .tool::after {
+    position : absolute;
+    left : 50%;
+    opacity : 0;
+    z-index: -100;
+  }
+  .tool:hover::before, .tool:focus::before, .tool:hover::after, .tool:focus::after{
+    opacity : 1;
+    z-index: 100;   
+    -moz-animation: cssAnimation 0s ease-in 9s ;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 9s ;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 9s ;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 9s ;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+  }
+  .tool::after,.tool::before {
+    opacity : 1;
+    z-index: 100;
+    -moz-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 9s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .tool::before {
+    border-style : solid;
+    border-width : 1em .75em 0 .75em;
+    border-color : #3e474f transparent transparent transparent;
+    bottom : 100%;
+    margin-left : -1.5em;
+    content : "";
+
+  }
+  
+  .tool::after {
+    background : #3e474f;
+    border-radius : 1rem;
+    bottom : 180%;
+    color : white;    
+    padding: .3em;
+    margin-left : -2.75em; 
+    content : attr(data-tip);
+    font-size: smaller;
+  }
+
+@keyframes cssAnimation {
+    to {  opacity : 0;
+        z-index: -100;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {  opacity : 0;
+        z-index: -100;
+    }
+}
